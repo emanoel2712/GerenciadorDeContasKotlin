@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ui.receita.CadastrarReceitaActivity" android:theme="@style/Dialog"></activity>
-        <activity android:name=".view.ui.despesa.CadastrarDespesaActivity" android:theme="@style/Dialog" />
+        <activity
+            android:name=".view.ui.receita.CadastrarReceitaActivity"
+            android:label="@string/title_receita"
+            android:theme="@style/Dialog"/>
+        <activity
+            android:name=".view.ui.despesa.CadastrarDespesaActivity"
+            android:label="@string/title_despesa"
+            android:theme="@style/Dialog" />
         <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

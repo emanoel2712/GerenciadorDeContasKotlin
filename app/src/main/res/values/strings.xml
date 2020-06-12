@@ -3,4 +3,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_despesa">Despesa</string>
     <string name="title_receita">Receita</string>
+    <string name="title_addReceita">Add Receita</string>
+    <string name="title_addDespesa">Add Despesa</string>
 </resources>
