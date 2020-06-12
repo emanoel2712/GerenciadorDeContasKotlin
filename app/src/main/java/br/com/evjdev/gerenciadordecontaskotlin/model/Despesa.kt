@@ -3,11 +3,12 @@ package br.com.evjdev.gerenciadordecontaskotlin.model
 import java.sql.Timestamp
 
 class Despesa {
-    val valor: Number
-    val descricao: String
-    val data: Timestamp
-    val pago: Boolean
+    lateinit var valor: Number
+    lateinit var descricao: String
+    lateinit var data: Timestamp
+    var pago: Boolean = false
 
+    constructor()
 
 
     constructor(valor: Number, descricao: String, data: Timestamp, pago: Boolean) {
@@ -16,8 +17,6 @@ class Despesa {
         this.data = data
         this.pago = pago
     }
-
-
 
 
 }

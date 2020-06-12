@@ -13,13 +13,15 @@ class CadastrarDespesaControl {
     lateinit var editDescricao: EditText
     lateinit var editData: EditText
     lateinit var checkBoxPago: CheckBox
-
+    val despesa: Despesa
 
     constructor(activity: Activity) {
         this.activity = activity
+
+        despesa = Despesa()
     }
 
-    private fun initComponents(){
+   fun initComponents(){
         editValor = activity.findViewById(R.id.editValor)
         editDescricao = activity.findViewById(R.id.editDesc)
         editData = activity.findViewById(R.id.editData)
@@ -28,12 +30,22 @@ class CadastrarDespesaControl {
 
     }
 
-    private fun salvarAction(){
-//        val despesa = Despesa
+    fun salvarAction(){
+        val despesa = Despesa()
 
-//        despesa.valor = this.editValor.text.toString()
-
+        despesa.valor = editValor.text.toString().toInt()
+        despesa.descricao = editDescricao.text.toString()
+//        despesa.data = editData.text.toString()
+        despesa.pago = verificaCheckBoxPago()
 
     }
+
+    fun verificaCheckBoxPago(): Boolean{
+        if (checkBoxPago.isSelected){
+            despesa.pago = true
+        }
+        return despesa.pago
+    }
+
 
 }

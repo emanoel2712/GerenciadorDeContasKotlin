@@ -6,8 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.evjdev.gerenciadordecontaskotlin.R
+import br.com.evjdev.gerenciadordecontaskotlin.model.Despesa
 
 class PesquisarDespesaFragment : Fragment() {
+
+    lateinit var listDespesa: ArrayList<Despesa>
 
     override fun onCreateView(
         inflater: LayoutInflater,
