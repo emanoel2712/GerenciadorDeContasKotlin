@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editValor"
+        android:inputType="number"
         android:hint="Digite o valor" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -36,7 +37,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Adicionar"
-    android:onClick="salvarAction"
+    android:id="@+id/btSalvar"
+
     ></Button>
 
 
