@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "811721508598",
+    "firebase_url": "https://gerenciadordecontaskotlin.firebaseio.com",
+    "project_id": "gerenciadordecontaskotlin",
+    "storage_bucket": "gerenciadordecontaskotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811721508598:android:f0383495edef4602624ed7",
+        "android_client_info": {
+          "package_name": "br.com.evjdev.gerenciadordecontaskotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811721508598-a94pk0md7j8jab2rk5b4dg97b3l6hqoq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.evjdev.gerenciadordecontaskotlin",
+            "certificate_hash": "d26fefc251c899d43dc899739a446099c9fb678b"
+          }
+        },
+        {
+          "client_id": "811721508598-9hog22vl89v48otdri5s1fk4u4e7timg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvU76wRq7pHkAQ3jgipB7Bb0fpPFOuC_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811721508598-9hog22vl89v48otdri5s1fk4u4e7timg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
