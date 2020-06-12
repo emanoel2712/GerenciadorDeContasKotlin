@@ -29,9 +29,9 @@ class CadastrarDespesaControl {
     }
 
     private fun salvarAction(){
-        val despesa = Despesa
+//        val despesa = Despesa
 
-        despesa.valor = this.editValor.text.toString()
+//        despesa.valor = this.editValor.text.toString()
 
 
     }
