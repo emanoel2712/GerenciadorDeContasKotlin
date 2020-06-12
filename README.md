@@ -4,9 +4,3 @@ APP destinado a possibilitar o usuário a fazer o gerenciamento de despesas e re
 
 # Ainda em desenvolvimento
 
-# Tecnologias utilizadas
-
-- Kotlin
-- Material Design
-- Firebase Database
-- Firebase Authentication
