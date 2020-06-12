@@ -11,11 +11,11 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.ui.receita.CadastrarReceitaActivity"
-            android:label="@string/title_receita"
+            android:label="@string/title_addReceita"
             android:theme="@style/Dialog"/>
         <activity
             android:name=".view.ui.despesa.CadastrarDespesaActivity"
-            android:label="@string/title_despesa"
+            android:label="@string/title_addDespesa"
             android:theme="@style/Dialog" />
         <activity android:name=".view.MainActivity">
             <intent-filter>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     tools:context=".view.ui.despesa.CadastrarDespesaActivity">
 
     <com.google.android.material.textfield.TextInputEditText
@@ -30,6 +31,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/checkboxPago"
         android:text="Pago"/>
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Adicionar"
+    android:onClick="salvarAction"
+    ></Button>
 
 
 

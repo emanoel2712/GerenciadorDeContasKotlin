@@ -19,6 +19,8 @@ class CadastrarDespesaControl {
         this.activity = activity
 
         despesa = Despesa()
+
+        initComponents()
     }
 
    fun initComponents(){
