@@ -20,7 +20,7 @@ class PesquisarReceitaFragment : Fragment() {
 //        dashboardViewModel =
 //            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_pesquisar_receita, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
+//        val textView: TextView = root.findViewById(R.id.text_dashboard)
 //        dashboardViewModel.text.observe(this, Observer {
 //            textView.text = it
 
