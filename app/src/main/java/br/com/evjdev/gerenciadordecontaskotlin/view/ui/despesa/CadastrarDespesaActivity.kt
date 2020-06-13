@@ -8,7 +8,7 @@ import br.com.evjdev.gerenciadordecontaskotlin.control.CadastrarDespesaControl
 
 class CadastrarDespesaActivity : AppCompatActivity() {
 
-    lateinit var control: CadastrarDespesaControl
+    private lateinit var control: CadastrarDespesaControl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

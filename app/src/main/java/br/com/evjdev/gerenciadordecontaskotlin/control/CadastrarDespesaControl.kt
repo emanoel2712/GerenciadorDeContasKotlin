@@ -7,6 +7,8 @@ import android.widget.CheckBox
 import android.widget.EditText
 import br.com.evjdev.gerenciadordecontaskotlin.R
 import br.com.evjdev.gerenciadordecontaskotlin.model.Despesa
+import br.com.evjdev.gerenciadordecontaskotlin.view.ui.despesa.PesquisarDespesaFragment
+import com.google.android.material.button.MaterialButton
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -19,28 +21,29 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 
 class CadastrarDespesaControl {
-    val activity: Activity
+    private val activity: Activity
 
-    lateinit var editValor: EditText
-    lateinit var editDescricao: EditText
-    lateinit var editData: EditText
-    lateinit var checkBoxPago: CheckBox
-    lateinit var btSalvar: Button
+    private lateinit var editValor: EditText
+    private lateinit var editDescricao: EditText
+    private lateinit var editData: EditText
+    private lateinit var checkBoxPago: CheckBox
+    private lateinit var btSalvar: MaterialButton
 
-    val despesa: Despesa
+    private lateinit var despesa: Despesa
 
-    lateinit var firebaseDataBase: FirebaseDatabase
-    lateinit var databaseReference: DatabaseReference
+    private lateinit var firebaseDataBase: FirebaseDatabase
+    private lateinit var databaseReference: DatabaseReference
 
     constructor(activity: Activity) {
         this.activity = activity
 
-        despesa = Despesa()
+
+//        val despesa = Despesa(despesa.id, despesa.valor, despesa.descricao, despesa.data, despesa.pago)
 
         initComponents()
     }
 
-    fun initComponents() {
+    private fun initComponents() {
         editValor = activity.findViewById(R.id.editValor)
         editDescricao = activity.findViewById(R.id.editDesc)
         editData = activity.findViewById(R.id.editData)
@@ -52,33 +55,42 @@ class CadastrarDespesaControl {
         clickButtonSalvar()
     }
 
-    fun initFirebase() {
+    private fun initFirebase() {
         FirebaseApp.initializeApp(activity);
         firebaseDataBase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDataBase.getReference()
 
     }
 
-    fun clickButtonSalvar() {
+    private fun clickButtonSalvar() {
         btSalvar.setOnClickListener(View.OnClickListener {
+
+//            var listDespesa
+//
+//            var pesquisarDespesaFragment = PesquisarDespesaFragment()
+//            PesquisarDespesaFragment
+//            pesquisarDespesaFragment.listDespesa?.clear()
+
+            despesa = Despesa()
+            //            val despesaInit = Despesa(despesa.id, despesa.valor, despesa.descricao, despesa.data, despesa.pago)
+
             despesa.id = UUID.randomUUID().toString();
-            despesa.valor = editValor.text.toString().toInt()
+            despesa.valor = editValor.text.toString()
             despesa.descricao = editDescricao.text.toString()
 
 //            val date = LocalDate.parse(editData.text, DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 //            val unix = l.atStartOfDay(ZoneId.systemDefault()).toInstant().epochSecond
-            val date = SimpleDateFormat("dd-MM-yyyy").parse(editData.text.toString())
 
-//            despesa.data = java.dvalueOf(string)
-                editData.text.toString()
+//            val date = SimpleDateFormat("dd-MM-yyyy").parse(editData.text.toString())
 
-            despesa.data = (date as? Timestamp)!!
+//            despesa.data = java.dvalueOf(stri
+//            despesa.data = (date as? Timestamp)!!
+            despesa.data = editData.text.toString()
 
 
-            despesa.pago = verificaCheckBoxPago()
+            despesa.pago = verificaCheckBoxPago(despesa)
 
             println("$despesa")
-
 
             databaseReference.child("Despesa").child(despesa.id).setValue(despesa)
 
@@ -87,7 +99,8 @@ class CadastrarDespesaControl {
 
     }
 
-    fun verificaCheckBoxPago(): Boolean {
+    private fun verificaCheckBoxPago(despesa: Despesa): Boolean {
+
         if (checkBoxPago.isSelected) {
             despesa.pago = true
         }

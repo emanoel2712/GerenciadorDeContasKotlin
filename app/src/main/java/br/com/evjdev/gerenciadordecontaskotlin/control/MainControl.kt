@@ -10,17 +10,17 @@ import br.com.evjdev.gerenciadordecontaskotlin.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainControl {
-    val appCompatActivity: AppCompatActivity
+    private val appCompatActivity: AppCompatActivity
 
-    lateinit var navView: BottomNavigationView
-    lateinit var navController: NavController
-    lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var navView: BottomNavigationView
+    private lateinit var navController: NavController
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     constructor(appCompatActivity: AppCompatActivity) {
         this.appCompatActivity = appCompatActivity
     }
 
-    fun initComponents() {
+    private fun initComponents() {
 
         navView = appCompatActivity.findViewById(R.id.nav_view)
         navController = appCompatActivity.findNavController(R.id.nav_host_fragment)

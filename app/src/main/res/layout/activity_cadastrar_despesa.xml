@@ -4,43 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:layout_margin="20dp"
+    android:orientation="vertical"
     tools:context=".view.ui.despesa.CadastrarDespesaActivity">
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editValor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editValor"
-        android:inputType="number"
-        android:hint="Digite o valor" />
+        android:hint="Digite o valor"
+        android:inputType="number" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editDesc"
         android:hint="Digite a descrição" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editData"
-        android:hint="Digite a data" />
+        android:hint="Digite a data"
+        android:inputType="datetime" />
 
     <CheckBox
+        android:id="@+id/checkboxPago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkboxPago"
-        android:text="Pago"/>
+        android:text="Pago" />
 
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Adicionar"
-    android:id="@+id/btSalvar"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar"
+        android:textColor="#fff"
 
-    ></Button>
-
+        ></com.google.android.material.button.MaterialButton>
 
 
 </LinearLayout>
