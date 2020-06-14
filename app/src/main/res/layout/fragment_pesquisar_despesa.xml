@@ -15,7 +15,7 @@
         tools:ignore="MissingConstraints"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewDespesas"
+        android:id="@+id/recyclerViewDespesa"
         android:layout_margin="15dp"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>

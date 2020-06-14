@@ -13,7 +13,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainControl {
     private val appCompatActivity: AppCompatActivity
 
-    private lateinit var navView: BottomNavigationView
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -25,7 +24,6 @@ class MainControl {
 
     private fun initComponents() {
 
-        navView = appCompatActivity.findViewById(R.id.nav_view)
         navController = appCompatActivity.findNavController(R.id.nav_host_fragment)
 
         appBarConfiguration =
@@ -33,7 +31,7 @@ class MainControl {
 
 
         appCompatActivity.setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        appCompatActivity.nav_view.setupWithNavController(navController)
     }
 
 

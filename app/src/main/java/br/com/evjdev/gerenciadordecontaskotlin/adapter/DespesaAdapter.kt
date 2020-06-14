@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.evjdev.gerenciadordecontaskotlin.R
 import br.com.evjdev.gerenciadordecontaskotlin.model.Despesa
+import kotlinx.android.synthetic.main.view_despesa.view.*
 
 class DespesaAdapter : RecyclerView.Adapter<DespesaAdapter.ViewHolder> {
 
@@ -27,32 +28,24 @@ class DespesaAdapter : RecyclerView.Adapter<DespesaAdapter.ViewHolder> {
     }
 
     override fun getItemCount(): Int {
-       return listDespesa.size
+        return listDespesa.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvValor.text = listDespesa[position].valor.toString()
-        holder.tvDescricao.text = listDespesa[position].descricao
-        holder.tvData.text = listDespesa[position].data.toString()
-        holder.tvPago.text = listDespesa[position].pago.toString()
+        holder.itemView.tvValor.text = listDespesa[position].valor
+        holder.itemView.tvDesc.text = listDespesa[position].descricao
+        holder.itemView.tvData.text = listDespesa[position].data
+        holder.itemView.tvPago.text = listDespesa[position].pago.toString()
 
     }
 
 
-    class ViewHolder : RecyclerView.ViewHolder {
-
-//       public final lateinit var tvValor: TextView
-//        lateinit var tvDescricao: TextView
-//        lateinit var tvData: TextView
-//        lateinit var tvPago: TextView
-
+    class ViewHolder: RecyclerView.ViewHolder{
 
         constructor(itemView: View) :
                 super(itemView)
 
-        var tvValor: TextView = itemView.findViewById(R.id.tvValor)
-        var tvDescricao: TextView = itemView.findViewById(R.id.tvDesc)
-        var tvData: TextView = itemView.findViewById(R.id.tvData)
-        var tvPago: TextView = itemView.findViewById(R.id.tvPago)
+
+
     }
 }
