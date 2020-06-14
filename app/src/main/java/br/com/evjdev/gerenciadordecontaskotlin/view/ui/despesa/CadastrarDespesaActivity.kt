@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import br.com.evjdev.gerenciadordecontaskotlin.R
 import br.com.evjdev.gerenciadordecontaskotlin.control.CadastrarDespesaControl
+import kotlinx.android.synthetic.main.activity_cadastrar_despesa.*
 
 class CadastrarDespesaActivity : AppCompatActivity() {
 
@@ -17,13 +18,5 @@ class CadastrarDespesaActivity : AppCompatActivity() {
         control = CadastrarDespesaControl(this)
     }
 
-//    fun salvarAction(){
-//        control.salvarAction()
-//
-//    }
 
-//   public final fun salvarAction(view: View): Unit {
-//        control.salvarAction()
-//
-//    }
 }

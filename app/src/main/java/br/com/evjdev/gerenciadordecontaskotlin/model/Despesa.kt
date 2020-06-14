@@ -6,18 +6,16 @@ import java.sql.Timestamp
 import java.util.*
 
 
-class Despesa: Serializable {
-     lateinit var id:  String
-     lateinit var valor: String
-     lateinit var descricao: String
-     lateinit var data: String
-     var pago: Boolean = false
-
-    constructor()
+data class Despesa(
+    var id: String = "",
+    var valor: String = "",
+    var descricao: String = "",
+    var data: String = "",
+    var pago: Boolean = false
+) : Serializable {
 
     override fun toString(): String {
-        return "Despesa(id='$id', valor=$valor, descricao='$descricao', data=$data, pago=$pago)"
+        return "Despesa(id='$id', valor='$valor', descricao='$descricao', data='$data', pago=$pago)"
     }
-
 
 }

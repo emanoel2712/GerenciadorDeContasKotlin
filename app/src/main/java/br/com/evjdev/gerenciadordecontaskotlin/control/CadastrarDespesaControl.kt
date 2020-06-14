@@ -2,7 +2,6 @@ package br.com.evjdev.gerenciadordecontaskotlin.control
 
 import android.app.Activity
 import android.view.View
-import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import br.com.evjdev.gerenciadordecontaskotlin.R
@@ -12,12 +11,8 @@ import com.google.android.material.button.MaterialButton
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_cadastrar_despesa.view.*
-import java.sql.Timestamp
-import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
+import kotlinx.android.synthetic.main.activity_cadastrar_despesa.*
+
 import java.util.*
 
 class CadastrarDespesaControl {
@@ -36,9 +31,6 @@ class CadastrarDespesaControl {
 
     constructor(activity: Activity) {
         this.activity = activity
-
-
-//        val despesa = Despesa(despesa.id, despesa.valor, despesa.descricao, despesa.data, despesa.pago)
 
         initComponents()
     }
@@ -65,29 +57,13 @@ class CadastrarDespesaControl {
     private fun clickButtonSalvar() {
         btSalvar.setOnClickListener(View.OnClickListener {
 
-//            var listDespesa
-//
-//            var pesquisarDespesaFragment = PesquisarDespesaFragment()
-//            PesquisarDespesaFragment
-//            pesquisarDespesaFragment.listDespesa?.clear()
-
             despesa = Despesa()
-            //            val despesaInit = Despesa(despesa.id, despesa.valor, despesa.descricao, despesa.data, despesa.pago)
 
             despesa.id = UUID.randomUUID().toString();
             despesa.valor = editValor.text.toString()
             despesa.descricao = editDescricao.text.toString()
 
-//            val date = LocalDate.parse(editData.text, DateTimeFormatter.ofPattern("dd-MM-yyyy"))
-//            val unix = l.atStartOfDay(ZoneId.systemDefault()).toInstant().epochSecond
-
-//            val date = SimpleDateFormat("dd-MM-yyyy").parse(editData.text.toString())
-
-//            despesa.data = java.dvalueOf(stri
-//            despesa.data = (date as? Timestamp)!!
             despesa.data = editData.text.toString()
-
-
             despesa.pago = verificaCheckBoxPago(despesa)
 
             println("$despesa")
@@ -97,15 +73,15 @@ class CadastrarDespesaControl {
             activity.finish()
         })
 
-    }
+}
 
-    private fun verificaCheckBoxPago(despesa: Despesa): Boolean {
+private fun verificaCheckBoxPago(despesa: Despesa): Boolean {
 
-        if (checkBoxPago.isSelected) {
-            despesa.pago = true
-        }
-        return despesa.pago
+    if (checkBoxPago.isSelected) {
+        despesa.pago = true
     }
+    return despesa.pago
+}
 
 
 }

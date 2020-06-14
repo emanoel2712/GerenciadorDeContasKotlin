@@ -7,6 +7,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import br.com.evjdev.gerenciadordecontaskotlin.R
+import kotlinx.android.synthetic.main.activity_main.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainControl {
@@ -18,6 +19,8 @@ class MainControl {
 
     constructor(appCompatActivity: AppCompatActivity) {
         this.appCompatActivity = appCompatActivity
+
+        initComponents()
     }
 
     private fun initComponents() {
